@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Register- CareMate</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 400px;
+            width: 100%;
+            padding: 30px;
+            border-radius: 20px;
+            position: relative;
+            background-color: #ffffff;
+            border: 1px solid #333;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .title {
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000000;
+            margin-top: 0;
+        }
+
+        .title::before {
+            width: 18px;
+            height: 18px;
+        }
+
+        .title::after {
+            width: 18px;
+            height: 18px;
+            animation: pulse 1s linear infinite;
+        }
+
+        .message, 
+        .signin {
+            font-size: 14.5px;
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        .signin {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .signin a:hover {
+            text-decoration: underline royalblue;
+        }
+
+        .signin a {
+            color: #00bfff;
+            text-decoration: none;
+        }
+
+        .flex {
+            display: flex;
+            width: 100%;
+            gap: 6px;
+        }
+
+        .form label {
+            position: relative;
+            width: 100%;
+        }
+
+        .form label .input {
+            background-color: #f5f5f5;
+            color: #333;
+            width: 100%;
+            padding: 20px 05px 05px 10px;
+            outline: 0;
+            border: 1px solid rgba(105, 105, 105, 0.397);
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        .form label .input + span {
+            color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            left: 10px;
+            top: 0px;
+            font-size: 0.9em;
+            cursor: text;
+            transition: 0.3s ease;
+        }
+
+        .form label .input:placeholder-shown + span {
+            top: 12.5px;
+            font-size: 0.9em;
+        }
+
+        .form label .input:focus + span,
+        .form label .input:valid + span {
+            color: #000000;
+            top: 0px;
+            font-size: 0.7em;
+            font-weight: 600;
+        }
+
+        .input {
+            font-size: medium;
+        }
+
+        .submit {
+            border: none;
+            outline: none;
+            padding: 10px;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 16px;
+            transition: .3s ease;
+            background-color: #000000;
+            cursor: pointer;
+        }
+
+        .submit:hover {
+            background-color: #00bfff;
+        }
+
+        /* OTP Container Styling */
+        .otp-container {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .otp-inputs {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .otp-input {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            font-size: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .otp-message {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .verify-button {
+            background-color: #000000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: .3s ease;
+        }
+
+        .verify-button:hover {
+            background-color: #00bfff;
+        }
+
+        @keyframes pulse {
+            from {
+                transform: scale(0.9);
+                opacity: 1;
+            }
+            to {
+                transform: scale(1.8);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form class="form" id="registrationForm">
+        <p class="title">Register</p>
+        <p class="message">Register now and get full access to our Website.</p>
+        <div class="flex">
+            <label>
+                <input class="input" type="text" placeholder="" required="">
+                <span>Firstname</span>
+            </label>
+            <label>
+                <input class="input" type="text" placeholder="" required="">
+                <span>Lastname</span>
+            </label>
+        </div>  
+        <label>
+            <input class="input" type="tel" placeholder="" required="" pattern="[0-9]{10}">
+            <span>Mobile Number</span>
+        </label>
+        
+        <button type="button" class="submit" id="getOtpBtn">Get OTP</button>
+        
+        <!-- OTP Container - Hidden by default -->
+        <div class="otp-container" id="otpContainer">
+            <p class="otp-message">Enter the OTP sent to your mobile</p>
+            <div class="otp-inputs">
+                <input type="text" maxlength="1" class="otp-input" id="otp1">
+                <input type="text" maxlength="1" class="otp-input" id="otp2">
+                <input type="text" maxlength="1" class="otp-input" id="otp3">
+                <input type="text" maxlength="1" class="otp-input" id="otp4">
+            </div>
+            <button type="button" class="verify-button" id="verifyOtpBtn">Verify & Continue</button>
+        </div>
+        
+        <p class="signin">Already have an account? <a href="Signin_Page.html">Signin</a></p>
+    </form>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const getOtpBtn = document.getElementById('getOtpBtn');
+            const otpContainer = document.getElementById('otpContainer');
+            const verifyOtpBtn = document.getElementById('verifyOtpBtn');
+            const otpInputs = document.querySelectorAll('.otp-input');
+            
+            // When "Get OTP" button is clicked
+            getOtpBtn.addEventListener('click', function() {
+                const mobileInput = document.querySelector('input[type="tel"]');
+                
+                if (mobileInput.validity.valid) {
+                    // Show OTP input fields
+                    otpContainer.style.display = 'flex';
+                    getOtpBtn.style.display = 'none';
+                    
+                    // Focus on first OTP input
+                    document.getElementById('otp1').focus();
+                    
+                    // Simulate OTP sent message
+                    alert('OTP has been sent to your mobile number');
+                } else {
+                    alert('Please enter a valid 10-digit mobile number');
+                }
+            });
+            
+            // Auto-tab between OTP inputs
+            otpInputs.forEach((input, index) => {
+                input.addEventListener('input', function() {
+                    if (this.value.length === this.maxLength) {
+                        if (index < otpInputs.length - 1) {
+                            otpInputs[index + 1].focus();
+                        }
+                    }
+                });
+                
+                // Handle backspace
+                input.addEventListener('keydown', function(e) {
+                    if (e.key === 'Backspace' && this.value.length === 0 && index > 0) {
+                        otpInputs[index - 1].focus();
+                    }
+                });
+            });
+            
+            // When "Verify & Continue" button is clicked
+            verifyOtpBtn.addEventListener('click', function() {
+                let otp = '';
+                let isValid = true;
+                
+                // Collect and validate OTP
+                otpInputs.forEach(input => {
+                    if (input.value.length === 0) {
+                        isValid = false;
+                    }
+                    otp += input.value;
+                });
+                
+                if (isValid) {
+                    // For demo: any 4-digit code is accepted
+                    // In a real app, you would validate this with your backend
+                    alert('OTP verified successfully!');
+                    
+                    // Redirect to home page
+                    window.location.href = 'index.html';
+                } else {
+                    alert('Please enter the complete OTP');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

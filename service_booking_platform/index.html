@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareMate - Professional Services at Your Doorstep</title>
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+<head>
+<body>
+
+<!-- Header -->
+<header>
+     <nav>
+      <div class="logo">CareMate</div>
+      <div class="nav-right">
+          <div class="location-select">
+              <span class="location-icon">📍</span>
+              <select id="locationSelect">
+                  <option value="">Select Location</option>
+                  <option value="new-york">Vijay nagar</option>
+                  <option value="los-angeles">Annapurna</option>
+                  <option value="chicago">Sage University</option>
+                  <option value="houston">Banganga</option>
+              </select>
+          </div>
+          <button class="cart-icon" id="cartButton">
+              🛒
+              <span class="cart-count" id="cartCount">0</span>
+          </button>
+          <div style="position: relative;">
+              <button class="profile-icon" id="profileButton">
+                  👤
+              </button>
+              <div class="profile-menu" id="profileMenu">
+                  <!-- it will be visible in js file Menu items will be dynamically populated -->
+              </div>
+          </div>
+      </div>
+  </nav>
+  <div class="cart-modal" id="cartModal">
+      <div class="cart-header">
+          <h2>Shopping Cart</h2>
+          <button class="close-cart" id="closeCart">&times;</button>
+      </div>
+      <div id="cartItems">
+          <!-- Cart items will be dynamically populated -->
+      </div>
+  </div>
+</header>
+      <!-- 
+        - #SERVICES
+      -->
+
+      <main>
+        <div class="home-container">
+            <div class="welcome-banner" id="welcomeBanner">
+                Welcome! Your account has been created successfully.
+            </div>
+
+            <div class="welcome-section">
+                <h1>Welcome to Our Service</span></h1>
+                <p>Discover our selection of premium services designed to make your life easier. With our trusted professionals and top-quality service, we ensure complete satisfaction.</p>
+                <p>Browse our services, book appointments, and track your services all in one place. We're dedicated to providing you with the best experience.</p>
+                <a href="#services" class="cta-button">Explore Services</a>
+            </div>
+
+            <div class="video-section">
+                <div class="video-container">
+                    <video controls autoplay muted loop>
+                        <source src="img/Image_Slide.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <div class="service-section" id="services">
+                <h2>Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-img">🏠</div>
+                        <div class="service-content">
+                            <h3>Home Cleaning</h3>
+                            <p>Professional cleaning services for your home with eco-friendly products.</p>
+                            <a href="#" class="service-link">Book Now →</a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-img">🔧</div>
+                        <div class="service-content">
+                            <h3>Plumbing Services</h3>
+                            <p>Expert plumbers to solve all your plumbing problems.</p>
+                            <a href="#" class="service-link">Book Now →</a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-img">🔌</div>
+                        <div class="service-content">
+                            <h3>Electrical Repairs</h3>
+                            <p>Certified electricians for all your electrical needs.</p>
+                            <a href="#" class="service-link">Book Now →</a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-img">🛠️</div>
+                        <div class="service-content">
+                            <h3>Home Repairs</h3>
+                            <p>General maintenance and repair services for your home.</p>
+                            <a href="#" class="service-link">Book Now →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+      <div class="section-wrapper">
+
+        <!-- 
+          - #MOST BOOKED - lates
+        -->
+
+        <section class="section most-book" aria-label="most book">
+          <div class="container">
+
+            <p class="section-subtitle">Most Booked</p>
+
+            <h2 class="h2 section-title">
+              <span class="span">Service</span>
+            </h2>
+
+            <ul class="has-scrollbar">
+
+              <li class="scrollbar-item">
+                <div class="most-book-card">
+
+                  <figure class="card-banner img-holder" style="--width: 200; --height: 270;">
+                    <img src="img/latest-game-1.jpeg" width="200" height="270" loading="lazy"
+                      alt="Haircut For Men" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="#" class="card-badge skewBg">Exclusive</a>
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Haircut For Men</a>
+                    </h3>
+
+                    <p class="card-price">
+                      <p1> &#9733; </p1>4.8 (874k)<br>
+                      Charges: <span class="span">&#8377;199</span>
+                    </p>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="most-book-card">
+
+                  <figure class="card-banner img-holder" style="--width: 200; --height: 270;">
+                    <img src="img/latest-game-2.jpeg" width=200" height="270" loading="lazy"
+                      alt="Sofa Cleaning" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="#" class="card-badge skewBg">Exclusive</a>
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Sofa Cleaning</a>
+                    </h3>
+
+                    <p class="card-price">
+                      <p1> &#9733; </p1>4.5 (674k)<br>
+                      Charges: <span class="span">&#8377; 799</span>
+                    </p>
+
+                  </div>
+
+                </div>
+              </li>
+
+              
+              <li class="most-book-card">
+                <div class="latest-game-card">
+
+                  <figure class="card-banner img-holder" style="--width: 200; --height: 270;">
+                    <img src="img/latest-game-3.jpeg" width="200" height="270" loading="lazy"
+                      alt="Drill & Hang" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="#" class="card-badge skewBg">Exclusive</a>
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Drill & Hang</a>
+                    </h3>
+
+                    <p class="card-price">
+                      <p1> &#9733; </p1>4.5 (674k)<br>
+                      Charges: <span class="span">&#8377; 799</span>
+                    </p>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <li class="scrollbar-item">
+                <div class="most-book-card">
+
+                  <figure class="card-banner img-holder" style="--width: 200; --height: 270;">
+                    <img src="img/latest-game-4.jpeg" width="200" height="270" loading="lazy"
+                      alt="Microwave Repair" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="#" class="card-badge skewBg">Exclusive</a>
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Microwave Repair</a>
+                    </h3>
+
+                    <p class="card-price">
+                      <p1> &#9733; </p1>4.1 (538k)<br>
+                      Charges : <span class="span">&#8377;219</span>
+                    </p>
+
+                  </div>
+
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+        </section>
+
+
+
+        <!-- 
+          - #GIRLS CORNER - live
+        -->
+
+        <h2 class="h2 section-title">
+          Girls <span class="span">Corner</span>
+        </h2>
+
+        
+
+
+            <div class="live-match-player">
+
+              <figure class="player player-1 img-holder" style="--width: 406; --height: 277;">
+                <img src="img/live-match-player-1.jpeg" width="406" height="277" loading="lazy"
+                  alt="Skin Care" class="w-100">
+              </figure>
+
+              <div class="live-match-detail">
+
+                <p class="live-match-subtitle" style="font-size: 20px;">Trendy Services For Girls</p>
+
+                <p style="font-size: 30px; text-align: center;"><b>FACIAL & CLEANUP</p>
+                <p style="font-size: 30px; text-align: center;">MANICURE</p>
+                <p style="font-size: 30px; text-align: center;">HAIR CARE</p>
+                <p style="font-size: 30px; text-align: center;">STRESS RELIEF</p>
+                <p style="font-size: 30px; text-align: center;" >NATURAL SKINCARE</b></p>
+            
+
+              </div>
+
+              <figure class="player player-2 img-holder" style="--width: 400; --height: 305;">
+                <img src="img/live-match-player-2.jpeg" width="400" height="305" loading="lazy"
+                  alt="Hair Care" class="w-100">
+              </figure>
+
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+
+
+      <!-- 
+        - #RELEASED SERVICES - featured
+      -->
+
+      <section class="section featured-game" id="features" aria-label="featured game">
+        <div class="container">
+
+          <h2 class="h2 section-title">
+            All <span class="span">Released</span> Services
+          </h2>
+
+          <ul class="has-scrollbar">
+
+            <li class="scrollbar-item">
+              <div class="featured-game-card">
+
+                <figure class="card-banner img-holder" style="--width: 450; --height: 600;">
+                  <img src="img/featured-game-1.jpeg" width="450" height="600" loading="lazy"
+                    alt="Apartment Shifters" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title" tabindex="-1">
+                      Apartment <span class="span">Shifters</span>
+                    </a>
+                  </h3>
+
+                  <span class="card-meta">
+                    <ion-icon name="cart"></ion-icon>
+
+                    <span class="span">Experienced Shifters</span>
+                  </span>
+
+                </div>
+
+                <div class="card-content-overlay">
+
+                  <img src="img/featured-game-icon.png" width="36" height="61" loading="lazy" alt=""
+                    class="card-icon">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">
+                      Apartment <span class="span">Shifters</span>
+                    </a>
+                  </h3>
+
+                  <span class="card-meta">
+                    <ion-icon name="notifications"></ion-icon>
+
+                    <span class="span">Experienced Shifters</span>
+                  </span>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="featured-game-card">
+
+                <figure class="card-banner img-holder" style="--width: 450; --height: 600;">
+                  <img src="img/featured-game-2.jpeg" width="450" height="600" loading="lazy"
+                    alt="Light Fittings" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title" tabindex="-1">
+                      Light <span class="span">Fittings</span>
+                    </a>
+                  </h3>
+
+                  <span class="card-meta">
+                    <ion-icon name="cart"></ion-icon>
+
+                    <span class="span">Best Engineers</span>
+                  </span>
+
+                </div>
+
+                <div class="card-content-overlay">
+
+                  <img src="img/featured-game-icon.png" width="36" height="61" loading="lazy" alt=""
+                    class="card-icon">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">
+                      Light <span class="span">Fittings</span>
+                    </a>
+                  </h3>
+
+                  <span class="card-meta">
+                    <ion-icon name="cart"></ion-icon>
+
+                    <span class="span">Best Engineers</span>
+                  </span>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="featured-game-card">
+
+                <figure class="card-banner img-holder" style="--width: 450; --height: 600;">
+                  <img src="img/featured-game-3.jpeg" width="450" height="600" loading="lazy"
+                    alt="Egypt Hunting Gamers" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title" tabindex="-1">
+                      <span class="span">Photography</span>
+                    </a>
+                  </h3>
+
+                  <span class="card-meta">
+                    <ion-icon name="cart"></ion-icon>
+
+                    <span class="span">Expert Photographer</span>
+                  </span>
+
+                </div>
+
+                <div class="card-content-overlay">
+
+                  <img src="img/featured-game-icon.png" width="36" height="61" loading="lazy" alt=""
+                    class="card-icon">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">
+                      <span class="span">Photography</span>
+                    </a>
+                  </h3>
+
+                  <span class="card-meta">
+                    <ion-icon name="cart"></ion-icon>
+
+                    <span class="span">Expert Photographer</span>
+                  </span>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="featured-game-card">
+
+                <figure class="card-banner img-holder" style="--width: 450; --height: 600;">
+                  <img src="img/featured-game-4.jpeg" width="450" height="600" loading="lazy"
+                    alt="Pest Controller" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title" tabindex="-1">
+                      Pest <span class="span">Controller</span>
+                    </a>
+                  </h3>
+
+                  <span class="card-meta">
+                    <ion-icon name="cart"></ion-icon>
+
+                    <span class="span">Pest Protection</span>
+                  </span>
+
+                </div>
+
+                <div class="card-content-overlay">
+
+                  <img src="img/featured-game-icon.png" width="36" height="61" loading="lazy" alt=""
+                    class="card-icon">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">
+                      Pest <span class="span">Controller</span>
+                    </a>
+                  </h3>
+
+                  <span class="card-meta">
+                    <ion-icon name="cart"></ion-icon>
+
+                    <span class="span">Pest Protection</span>
+                  </span>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="featured-game-card">
+
+                <figure class="card-banner img-holder" style="--width: 450; --height: 600;">
+                  <img src="img/featured-game-3.jpeg" width="450" height="600" loading="lazy"
+                    alt="Photography" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title" tabindex="-1">
+                      <span class="span">Photography</span>
+                    </a>
+                  </h3>
+
+                  <span class="card-meta">
+                    <ion-icon name="cart"></ion-icon>
+
+                    <span class="span">Expert Photographer</span>
+                  </span>
+
+                </div>
+
+                <div class="card-content-overlay">
+
+                  <img src="img/featured-game-icon.png" width="36" height="61" loading="lazy" alt=""
+                    class="card-icon">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">
+                      <span class="span">Photography</span>
+                    </a>
+                  </h3>
+
+                  <span class="card-meta">
+                    <ion-icon name="cart"></ion-icon>
+
+                    <span class="span">Expert Photographer</span>
+                  </span>
+
+                </div>
+
+              </div>
+            </li>
+            <li class="scrollbar-item">
+              <div class="featured-game-card">
+
+                <figure class="card-banner img-holder" style="--width: 450; --height: 600;">
+                  <img src="img/featured-game-3.jpeg" width="450" height="600" loading="lazy"
+                    alt="Egypt Hunting Gamers" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title" tabindex="-1">
+                      <span class="span">Photography</span>
+                    </a>
+                  </h3>
+
+                  <span class="card-meta">
+                    <ion-icon name="cart"></ion-icon>
+
+                    <span class="span">Expert Photographer</span>
+                  </span>
+
+                </div>
+
+                <div class="card-content-overlay">
+
+                  <img src="img/featured-game-icon.png" width="36" height="61" loading="lazy" alt=""
+                    class="card-icon">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">
+                      <span class="span">Photography</span>
+                    </a>
+                  </h3>
+
+                  <span class="card-meta">
+                    <ion-icon name="cart"></ion-icon>
+
+                    <span class="span">Expert Photographer</span>
+                  </span>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+      <!-- 
+        - #SHOP
+      -->
+
+      <section class="section shop" id="shop" aria-label="shop"
+        style="background-image: url('shop-bg.jpg');">
+        <div class="container">
+
+          <h2 class="h2 section-title">
+            Home <span class="span">Decore</span> Corner
+          </h2>
+
+          <p class="section-text">
+            A Master Piece That Tells Its Own Story
+          </p>
+
+          <ul class="has-scrollbar">
+
+            <li class="scrollbar-item">
+              <div class="shop-card">
+
+                <figure class="card-banner img-holder" style="--width: 300px; --height: 260px;">
+                  <img src="img/shop-img-1.jpeg" width="300" height="260" loading="lazy"
+                    alt="Decore" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <a href="#" class="card-badge skewBg">Decore Statue</a>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Lord Shree Ram</a>
+                  </h3>
+
+                  <div class="card-wrapper">
+                    <p class="card-price">&#8377;1099</p>
+
+                    <button class="card-btn">
+                      <ion-icon name="basket"></ion-icon>
+                    </button>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="shop-card">
+
+                <figure class="card-banner img-holder" style="--width: 300; --height: 260;">
+                  <img src="img/shop-img-2.jpeg" width="300" height="260" loading="lazy"
+                    alt="Decore" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <a href="#" class="card-badge skewBg">Exclusive Item</a>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Gold Platted Chess</a>
+                  </h3>
+
+                  <div class="card-wrapper">
+                    <p class="card-price">&#8377;5999</p>
+
+                    <button class="card-btn">
+                      <ion-icon name="basket"></ion-icon>
+                    </button>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="shop-card">
+
+                <figure class="card-banner img-holder" style="--width: 300; --height: 260;">
+                  <img src="img/shop-img-3.jpeg" width="300" height="260" loading="lazy"
+                    alt="Decore" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <a href="#" class="card-badge skewBg">Exclusive Item</a>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Lord Shree Ram</a>
+                  </h3>
+
+                  <div class="card-wrapper">
+                    <p class="card-price">&#8377;1599</p>
+
+                    <button class="card-btn">
+                      <ion-icon name="basket"></ion-icon>
+                    </button>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="shop-card">
+
+                <figure class="card-banner img-holder" style="--width: 300; --height: 260;">
+                  <img src="img/shop-img-4.jpeg" width="300" height="260" loading="lazy"
+                    alt="Decore" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <a href="#" class="card-badge skewBg">Office Decore</a>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Loving Golden Swan Couple </a>
+                  </h3>
+
+                  <div class="card-wrapper">
+                    <p class="card-price">&#8377;1999</p>
+
+                    <button class="card-btn">
+                      <ion-icon name="basket"></ion-icon>
+                    </button>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="shop-card">
+
+                <figure class="card-banner img-holder" style="--width: 300; --height: 260;">
+                  <img src="img/shop-img-2.jpg" width="300" height="260" loading="lazy"
+                    alt="Decore" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <a href="#" class="card-badge skewBg">Exclusive Item</a>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Video Game Controller</a>
+                  </h3>
+
+                  <div class="card-wrapper">
+                    <p class="card-price">&#8377;699</p>
+
+                    <button class="card-btn">
+                      <ion-icon name="basket"></ion-icon>
+                    </button>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="shop-card">
+
+                <figure class="card-banner img-holder" style="--width: 300; --height: 260;">
+                  <img src="img/shop-img-3.jpg" width="300" height="260" loading="lazy"
+                    alt="Decore" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <a href="#" class="card-badge skewBg">Exclusive Item</a>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Boat Sound Box</a>
+                  </h3>
+
+                  <div class="card-wrapper">
+                    <p class="card-price">&#8377;5999</p>
+
+                    <button class="card-btn">
+                      <ion-icon name="basket"></ion-icon>
+                    </button>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="shop-card">
+
+                <figure class="card-banner img-holder" style="--width: 300; --height: 260;">
+                  <img src="img/shop-img-4.jpg" width="300" height="260" loading="lazy"
+                    alt="Decore" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <a href="#" class="card-badge skewBg">Exclusive item</a>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Boat Bluetooth Buds</a>
+                  </h3>
+
+                  <div class="card-wrapper">
+                    <p class="card-price">&#8377;999</p>
+
+                    <button class="card-btn">
+                      <ion-icon name="basket"></ion-icon>
+                    </button>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>>
+
+ <!-- How It Works Section -->
+ <section class="how-it-works" id="how-it-works">
+  <div class="container">
+    <div class="section-title" data-aos="fade-up">
+      <h2>How It Works</h2>
+      <p>Booking a service with CareMate is simple and hassle-free</p>
+    </div>
+    <div class="steps">
+      <div class="step" data-aos="fade-up" data-aos-delay="100">
+        <div class="step-icon">
+          <i class="fas fa-search"></i>
+        </div>
+        <h3>Search</h3>
+        <p>Find the service you need from our extensive catalog</p>
+      </div>
+      <div class="step" data-aos="fade-up" data-aos-delay="200">
+        <div class="step-icon">
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <h3>Book</h3>
+        <p>Select a convenient date and time for your service</p>
+      </div>
+      <div class="step" data-aos="fade-up" data-aos-delay="300">
+        <div class="step-icon">
+          <i class="fas fa-user-check"></i>
+        </div>
+        <h3>Confirm</h3>
+        <p>Review your booking details and confirm your appointment</p>
+      </div>
+      <div class="step" data-aos="fade-up" data-aos-delay="400">
+        <div class="step-icon">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <h3>Enjoy</h3>
+        <p>Sit back and enjoy professional service at your doorstep</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-title" data-aos="fade-up">
+      <h2>What Our Customers Say</h2>
+      <p>Read about the experiences of our satisfied customers</p>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonial-text">
+          "The cleaning service I booked through CareMate was exceptional. The professional was punctual, thorough, and friendly. My home has never looked better!"
+        </div>
+        <div class="testimonial-author">
+          <div class="author-img">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="author-info">
+            <h4>Sanjeev Agrawal</h4>
+            <p>Sage University, Indore</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="testimonial-text">
+          "I had an AC issue during the hottest week of summer. CareMate connected me with a technician who fixed it within hours. The service was fast, reliable, and fairly priced."
+        </div>
+        <div class="testimonial-author">
+          <div class="author-img">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="author-info">
+            <h4>Jayesh Singh Rajput</h4>
+            <p>Chhota Baangarda, Indore</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="testimonial-text">
+          "The massage therapist I booked through CareMate was incredibly professional. The convenience of having the service at home made it even better. Will definitely book again!"
+        </div>
+        <div class="testimonial-author">
+          <div class="author-img">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="author-info">
+            <h4>Mridul Singh Rajput</h4>
+            <p>Annapurna Road, Indore</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+  <div class="container">
+    <h2>Ready to Experience Professional Services?</h2>
+    <p>Join thousands of satisfied customers who rely on CareMate for all their service needs. Book your first service today and enjoy the convenience!</p>
+    <a href="#" class="btn">Get Started</a>
+  </div>
+</section>
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">CAREMATE</a>
+
+          <p class="footer-text">
+            Empowering You With The Right Tallent For Every Task
+          </p>
+
+          <ul class="contact-list">
+
+            <li class="contact-item">
+              <div class="contact-icon">
+                <ion-icon name="location"></ion-icon>
+              </div>
+
+              <address class="item-text">
+                Address : Sage University,Indore
+              </address>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-icon">
+                <ion-icon name="headset"></ion-icon>
+              </div>
+
+              <a href="tel:+911234567891" class="item-text">Phone : +91 1234567891</a>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-icon">
+                <ion-icon name="mail-open"></ion-icon>
+              </div>
+
+              <a href="mailto:info@exemple.com" class="item-text">Email : caremate@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Service</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Graphics (26)</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Backgrounds (11)</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Fonts (9)</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Music (3)</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Photography (3)</a>
+          </li>
+
+        </ul>
+
+        <div class="footer-wrapper">
+
+          <div class="social-wrapper">
+
+            <p class="footer-list-title">Follow Us</p>
+
+            <ul class="social-list">
+
+              <li>
+                <a href="#" class="social-link" style="background-color: #3b5998">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link" style="background-color: #55acee">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link" style="background-color: #d00707">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link" style="background-color: #1565c0">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div class="footer-newsletter">
+
+            <p class="footer-list-title">Newsletter Sign Up</p>
+
+            <form action="" class="footer-newsletter">
+              <input type="email" name="email_address" aria-label="email" placeholder="Enter your email" required
+                class="email-field">
+
+              <button type="submit" class="footer-btn" aria-label="submit">
+                <ion-icon name="rocket"></ion-icon>
+              </button>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2024 CareMate. All Right Reserved by <a href="#" class="copyright-link">Caremate</a>
+        </p>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
