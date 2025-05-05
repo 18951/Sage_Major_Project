@@ -16,7 +16,7 @@ Online Service Booking Platform that allows users to book various home and comme
 - **Database:** MySQL
 - **Authentication:** Firebase Authentication
 - **Payment Gateway:** Razorpay
-- **Hosting:** AWS 
+- **Hosting:** Github 
 
 ## 🏗️ Future Enhancements
 - AI-based service recommendations.
