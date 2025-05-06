@@ -14,7 +14,6 @@ Online Service Booking Platform that allows users to book various home and comme
 - **Frontend:** HTML, CSS, JavaScript 
 - **Backend:** Node.js
 - **Database:** MySQL
-- **Authentication:** Firebase Authentication
 - **Payment Gateway:** Razorpay
 - **Hosting:** Github 
 
