@@ -1267,7 +1267,190 @@ button {
   z-index: 1;
 }
 
+
+/* Responsive layout for mobile or other devices */
+@media (min-width: 576px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .modal-content {
+    width: 90%;
+    max-width: 600px;
+  }
+
+  .carousel-item.card {
+    width: 220px;
+  }
+
+  .view-more-content {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+
+  .booking-details-modal {
+    max-width: 650px;
+  }
+
+  .my-bookings-modal {
+    max-width: 650px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .nav-right {
+    gap: 2rem;
+  }
+
+  .search-container input {
+    width: 300px;
+  }
+
+  .search-container input:focus {
+    width: 350px;
+  }
+
+  .pincode-container input {
+    width: 200px;
+  }
+
+  .pincode-container input:focus {
+    width: 220px;
+  }
+
+  .modal-content {
+    max-width: 850px;
+  }
+
+  .carousel-item.card {
+    width: 250px;
+  }
+
+  .view-more-content {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+
+  .booking-details-modal {
+    max-width: 750px;
+  }
+
+  .my-bookings-modal {
+    max-width: 850px;
+  }
+}
+
 /* Responsive layout for mobile */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    padding: 1rem;
+  }
+
+  .nav-right {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .search-container {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .search-container input {
+    width: 100%;
+  }
+
+  .search-container input:focus {
+    width: 100%;
+  }
+
+  .pincode-container {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .pincode-container input {
+    width: 100%;
+  }
+
+  .pincode-container input:focus {
+    width: 100%;
+  }
+
+  .pincode-suggestions {
+    width: 100%;
+  }
+
+  .cart-modal {
+    width: 100%;
+    right: -100%;
+  }
+
+  .cart-modal.active {
+    right: 0;
+  }
+
+  .modal-content {
+    width: 95%;
+  }
+
+  #authModal .modal-content {
+    width: 90%;
+  }
+
+  .carousel {
+    padding: 0 20px;
+  }
+
+  .carousel-item.card {
+    flex: 0 0 200px;
+  }
+
+  .carousel-control {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .carousel-prev {
+    left: 0;
+  }
+
+  .carousel-next {
+    right: 0;
+  }
+
+  .view-more-content {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-title::after {
+    width: 200px;
+  }
+
+  .booking-details-content {
+    padding: 15px;
+  }
+
+  .booking-item {
+    padding: 15px;
+  }
+
+  .tracking-timeline {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Responsive layout for mobile */
 @media (max-width: 768px) {
   .tracking-timeline {
     flex-direction: column;
@@ -1298,6 +1481,43 @@ button {
     left: 15px;
     width: 3px;
     height: 100%;
+  }
+}
+
+  .tracking-timeline::before {
+    top: 25px;
+    bottom: 25px;
+    left: 15px;
+    width: 3px;
+    height: auto;
+  }
+
+  .timeline-item {
+    flex-direction: row;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  .timeline-node {
+    margin-right: 10px;
+    margin-bottom: 0;
+    width: 25px;
+    height: 25px;
+  }
+
+  .timeline-item:not(:last-child)::after {
+    top: 35px;
+    left: 12px;
+    width: 3px;
+    height: 100%;
+  }
+
+  .timeline-label {
+    font-size: 11px;
+  }
+
+  .timeline-date {
+    font-size: 9px;
   }
 }
 
